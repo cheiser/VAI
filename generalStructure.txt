@@ -1,0 +1,22 @@
+MAKControl - Responsible for Mouse And Keyboard control (concrete implementation is OS unique)
+MAKControlWindows - MAKControl implementation for windows
+VKKeysLookup - Basically a lookup table for keys used by the windows implementation
+
+Snapshot - Responsible for taking screenshots and saving them to the correct folders, with the correct names...
+
+UILearner - Responsible for recognising objects and their locations on screen. How should this work? You send in an
+object and it returns its locations or you detect things and it returns all the things it has detected and their
+locations? How to differentiate between objects? "Dictionary" with constants, basically an enum. Should it also return
+size? Bounding box? Top left, bottom right?
+Might need a good way to combine "known" locations and detecting objects which may move...
+
+DetectImageLocationsInsideImage - This will take a small image and a larger image and return all the locations
+where the small image occurs inside the large image... Maybe I already have a program that does this somewhere?
+Convert images to numpy arrays and then do the (image1 == image2).all(1) (.any). This is now implemented and named
+ObjectInImageDetector....
+
+
+
+
+
+
