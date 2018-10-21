@@ -40,6 +40,7 @@ def calculateMatchScore(super, sub, (x, y)):
 
     return normalized.sum()
 
+# Main testing method. Should be removed at a later time...
 def main():
     # load super image
     superImg = cv2.imread("screenshots/super.PNG")

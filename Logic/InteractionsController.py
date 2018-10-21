@@ -43,8 +43,8 @@ class InteractionsController():
     # a space-key press exit the program by setting the exitMainLoop to True...
     @abc.abstractmethod
     def userInput(self):
-        raise NotImplementedError("User must implement moveMouseToPosition")
+        raise NotImplementedError("User must implement userInput")
 
     @abc.abstractmethod
     def actUponFeedback(self, foundObjectAndTheirLocations):
-        raise NotImplementedError("User must implement moveMouseToPosition")
+        raise NotImplementedError("User must implement actUponFeedback")

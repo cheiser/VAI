@@ -15,6 +15,8 @@ where the small image occurs inside the large image... Maybe I already have a pr
 Convert images to numpy arrays and then do the (image1 == image2).all(1) (.any). This is now implemented and named
 ObjectInImageDetector....
 
+InteractionsController - MAIN CLASS
+
 
 
 
