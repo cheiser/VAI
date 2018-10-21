@@ -22,6 +22,9 @@ class MAKControlWindows(MAKControl):
     def moveMouseToPosition(self, xCord, yCord):
         win32api.SetCursorPos((xCord, yCord))
 
+    def getCurrentMousePosition(self):
+        return win32api.GetCursorPos()
+
     ###########################################################################
     ## Scrolling section
     ###########################################################################
@@ -34,7 +37,7 @@ class MAKControlWindows(MAKControl):
     ###########################################################################
     # mode defines which mode the given coordinate is "evented" in, it could for example be left down etc.
     def mouseEvent(self, xCord, yCord, mode):
-        win32api.mouse_event(modeTable[mode], xCord, yCord)
+        win32api.mouse_event(self.modeTable[mode], xCord, yCord)
 
     ###########################################################################
     ## Keyboard interaction section

@@ -14,9 +14,15 @@ class MAKControl():
     ## Mouse movement section
     ###########################################################################
 
+    # Moves the mouse to the specified x and y coordinates
     @abc.abstractmethod
     def moveMouseToPosition(self, xCord, yCord):
         raise NotImplementedError("User must implement moveMouseToPosition")
+
+    # Returns the current coordinates of the mouse
+    @abc.abstractmethod
+    def getCurrentMousePosition(self):
+        raise NotImplementedError("User must implement getCurrentMousePosition")
 
     ###########################################################################
     ## Scrolling section
@@ -25,6 +31,7 @@ class MAKControl():
     def mouseScrollPos(self, scrollAmount, xCord, yCord):
         raise NotImplementedError("User must implement mouseScrollPos")
 
+    # Scrolls the mouse the specified amount in the
     def mouseScroll(self, scrollAmount):
         self.mouseScrollPos(scrollAmount, 0, 0)
 
